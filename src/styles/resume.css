@@ -106,17 +106,33 @@
 }
 
 [data-section-type='skills'] section {
-  display: flex;
+  display: grid;
+  grid-template-columns: 132pt minmax(0, 1fr);
   align-items: baseline;
-  gap: var(--space-3);
+  column-gap: var(--space-3);
 }
 
 [data-section-type='skills'] h3 {
-  flex: 0 0 auto;
   font-size: var(--font-size-body);
+  white-space: nowrap;
 }
 
-[data-section-type='skills'] section ul,
+[data-section-type='skills'] section ul {
+  display: flex;
+  flex-wrap: wrap;
+  color: var(--color-secondary);
+  font-size: var(--font-size-meta);
+  list-style: none;
+}
+
+[data-skill-separator] {
+  margin-inline: var(--space-2);
+}
+
+[data-resume-document] [data-section-type='skills'] section li + li {
+  margin-top: 0;
+}
+
 [data-technologies] {
   display: flex;
   flex-wrap: wrap;
