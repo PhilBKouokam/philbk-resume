@@ -1,0 +1,37 @@
+:root {
+  --font-sans: Arial, Helvetica, sans-serif;
+
+  --color-primary: #171717;
+  --color-secondary: #4b5563;
+  --color-link: #1d4ed8;
+
+  --font-size-name: 22pt;
+  --font-size-role: 10pt;
+  --font-size-heading: 9pt;
+  --font-size-item: 9.5pt;
+  --font-size-body: 8.75pt;
+  --font-size-meta: 8.5pt;
+  --font-size-supporting: 8pt;
+
+  --line-height-tight: 1.08;
+  --line-height-heading: 1.2;
+  --line-height-meta: 1.3;
+  --line-height-body: 1.36;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  --space-1: 2pt;
+  --space-2: 4pt;
+  --space-3: 6pt;
+  --space-4: 8pt;
+  --space-5: 12pt;
+  --space-6: 16pt;
+  --space-8: 24pt;
+
+  --page-width: 8.5in;
+  --page-min-height: 11in;
+  --page-margin: 0.5in;
+  --divider-width: 0.5pt;
+}

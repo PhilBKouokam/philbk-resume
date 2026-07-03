@@ -1,0 +1,14 @@
+@import './tokens.css';
+@import './reset.css';
+@import './resume.css';
+@import './print.css' print;
+
+@media screen {
+  body {
+    min-width: 0;
+  }
+
+  [data-resume-document] {
+    outline: 1px solid var(--color-secondary);
+  }
+}

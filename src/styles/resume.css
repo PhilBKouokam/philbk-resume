@@ -1,0 +1,168 @@
+[data-resume-document] {
+  width: min(100%, var(--page-width));
+  min-height: var(--page-min-height);
+  margin-inline: auto;
+  padding: var(--page-margin);
+  color: var(--color-primary);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-body);
+}
+
+[data-resume-document] a {
+  color: var(--color-link);
+  text-decoration-line: underline;
+  text-decoration-thickness: from-font;
+  text-underline-offset: var(--space-1);
+}
+
+[data-resume-document] h1,
+[data-resume-document] h2,
+[data-resume-document] h3 {
+  color: var(--color-primary);
+  font-family: var(--font-sans);
+}
+
+[data-resume-document] h1 {
+  font-size: var(--font-size-name);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.025em;
+  line-height: var(--line-height-tight);
+}
+
+[data-resume-document] h2 {
+  padding-bottom: var(--space-2);
+  border-bottom: var(--divider-width) solid var(--color-secondary);
+  font-size: var(--font-size-heading);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.06em;
+  line-height: var(--line-height-heading);
+  text-transform: uppercase;
+}
+
+[data-resume-document] h3 {
+  font-size: var(--font-size-item);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-heading);
+}
+
+[data-resume-document] > section {
+  margin-top: var(--space-5);
+}
+
+[data-resume-document] > section > h2 {
+  margin-bottom: var(--space-3);
+}
+
+[data-resume-document] section > ul {
+  list-style: none;
+}
+
+[data-resume-document] section > ul > li + li {
+  margin-top: var(--space-4);
+}
+
+[data-resume-header] {
+  margin-bottom: var(--space-6);
+}
+
+[data-resume-header] > p {
+  margin-top: var(--space-2);
+  color: var(--color-primary);
+  font-size: var(--font-size-role);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.055em;
+  line-height: var(--line-height-heading);
+  text-transform: uppercase;
+}
+
+[data-resume-header] address {
+  margin-top: var(--space-3);
+  color: var(--color-secondary);
+  font-size: var(--font-size-meta);
+  line-height: var(--line-height-meta);
+}
+
+[data-resume-header] address > p {
+  margin-bottom: var(--space-2);
+}
+
+[data-resume-header] nav ul,
+[data-section-type='projects'] nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+  list-style: none;
+}
+
+[data-resume-header] nav li,
+[data-section-type='projects'] nav li {
+  margin: 0;
+}
+
+[data-section-type='skills'] > ul > li + li {
+  margin-top: var(--space-2);
+}
+
+[data-section-type='skills'] section {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+}
+
+[data-section-type='skills'] h3 {
+  flex: 0 0 auto;
+  font-size: var(--font-size-body);
+}
+
+[data-section-type='skills'] section ul,
+[data-technologies] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--space-3);
+  color: var(--color-secondary);
+  font-size: var(--font-size-meta);
+  list-style: none;
+}
+
+[data-section-type='experience'] article > p,
+[data-section-type='experience'] article > span,
+[data-section-type='certifications'] article > p,
+[data-section-type='certifications'] article > time,
+[data-section-type='education'] article > p,
+[data-section-type='education'] article > time {
+  color: var(--color-secondary);
+  font-size: var(--font-size-meta);
+  line-height: var(--line-height-meta);
+}
+
+[data-section-type='projects'] article > nav {
+  margin-top: var(--space-1);
+  font-size: var(--font-size-supporting);
+  font-weight: var(--font-weight-medium);
+}
+
+[data-section-type='projects'] article > p {
+  margin-top: var(--space-3);
+}
+
+[data-accomplishments],
+[data-project-bullets] {
+  margin-top: var(--space-2);
+  padding-inline-start: var(--space-5);
+}
+
+[data-accomplishments] li,
+[data-project-bullets] li {
+  padding-inline-start: var(--space-1);
+}
+
+[data-accomplishments] li + li,
+[data-project-bullets] li + li {
+  margin-top: var(--space-1);
+}
+
+[data-technologies] {
+  margin-top: var(--space-2);
+}
