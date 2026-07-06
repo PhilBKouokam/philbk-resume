@@ -4,6 +4,15 @@ import { normalizeResumeVariant } from './normalize.js'
 const variantLoaders = Object.freeze({
   frontend: () => import('./variants/frontend.js'),
   fullstack: () => import('./variants/fullstack.js'),
+  'amazon-frontend': () => import('./variants/amazon-frontend.js'),
+  'hhaexchange-fullstack': () => import('./variants/hhaexchange-fullstack.js'),
+  'garmin-software-engineer': () => import('./variants/garmin-software-engineer.js'),
+  'cox-software-engineer': () => import('./variants/cox-software-engineer.js'),
+  'spacex-starlink-fullstack': () => import('./variants/spacex-starlink-fullstack.js'),
+  'tesla-people-products': () => import('./variants/tesla-people-products.js'),
+  'tesla-frontend-energy': () => import('./variants/tesla-frontend-energy.js'),
+  'spacex-starship-ci': () => import('./variants/spacex-starship-ci.js'),
+  'twitch-software-engineer': () => import('./variants/twitch-software-engineer.js'),
   startup: () => import('./variants/startup.js'),
   cloud: () => import('./variants/cloud.js'),
 })

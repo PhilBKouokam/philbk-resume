@@ -1,4 +1,4 @@
 export const professionalSummary = Object.freeze({
   heading: 'Professional Summary',
-  text: 'Full-Stack Engineer specializing in React, Node.js, Express.js, MongoDB, and AWS. Built and deployed three production MERN applications and a production portfolio (philbk.dev) that showcases a systems-first approach to engineering. Experienced in building responsive user interfaces, secure REST APIs, authentication systems, and cloud-integrated applications from development through deployment.',
+  text: 'Full-Stack Software Engineer specializing in React, JavaScript, Node.js, Express.js, MongoDB, and AWS. Built production-ready full-stack applications and cloud engineering projects featuring secure REST APIs, authentication, reusable component architectures, responsive user interfaces, and scalable AWS infrastructure. AWS Certified Solutions Architect – Associate with hands-on experience designing, deploying, documenting, and maintaining modern cloud solutions.',
 })

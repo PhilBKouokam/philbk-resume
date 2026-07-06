@@ -2,11 +2,9 @@ export const projects = Object.freeze([
   Object.freeze({
     id: 'caloriebank',
     name: 'CalorieBank',
-    description: 'Designed and deployed a full-stack nutrition platform centered on a calorie banking system that combines personalized TDEE calculations, secure authentication, food logging, and cloud-based image uploads.',
     bullets: Object.freeze([
-      'Architected secure authentication, protected routing, and persistent user profiles using JWT, Express.js, and MongoDB to support personalized nutrition tracking.',
-      'Designed reusable React components and Context API state management to deliver a responsive, maintainable user experience across desktop and mobile devices.',
-      'Integrated AWS S3 image uploads, automated calorie banking logic, and cloud deployment using Vercel and Render.',
+      'Built reusable React components and Context API state management for responsive calorie banking and food-logging workflows.',
+      'Implemented secure JWT REST APIs, MongoDB user profiles, AWS S3 uploads, and deployment through Vercel and Render.',
     ]),
     technologies: Object.freeze([
       'React',
@@ -21,7 +19,7 @@ export const projects = Object.freeze([
     ]),
     linksLabel: 'CalorieBank links',
     links: Object.freeze([
-      Object.freeze({ id: 'case-study', label: 'Portfolio Case Study', url: 'https://philbk.dev' }),
+      Object.freeze({ id: 'case-study', label: 'Portfolio Case Study', url: 'https://philbk.dev/#projects' }),
       Object.freeze({ id: 'live-demo', label: 'Live Demo', url: 'https://caloriebank-pi.vercel.app' }),
       Object.freeze({ id: 'github', label: 'GitHub Repository', url: 'https://github.com/PhilBKouokam/CalorieBank' }),
     ]),
@@ -29,10 +27,8 @@ export const projects = Object.freeze([
   Object.freeze({
     id: 'spendwise',
     name: 'SpendWise',
-    description: 'Built a full-stack personal finance platform supporting authenticated expense tracking, receipt uploads, budgeting, and interactive financial dashboards.',
     bullets: Object.freeze([
-      'Implemented secure authentication and persistent CRUD operations using the MERN stack.',
-      'Developed interactive financial dashboards and integrated AWS S3 receipt uploads.',
+      'Built an authenticated MERN finance dashboard with persistent CRUD workflows, Recharts visualization, and AWS S3 receipt uploads.',
     ]),
     technologies: Object.freeze([
       'React',
@@ -45,7 +41,7 @@ export const projects = Object.freeze([
     ]),
     linksLabel: 'SpendWise links',
     links: Object.freeze([
-      Object.freeze({ id: 'case-study', label: 'Portfolio Case Study', url: 'https://philbk.dev' }),
+      Object.freeze({ id: 'case-study', label: 'Portfolio Case Study', url: 'https://philbk.dev/#projects' }),
       Object.freeze({ id: 'live-demo', label: 'Live Demo', url: 'https://spendwise-two-navy.vercel.app' }),
       Object.freeze({ id: 'github', label: 'GitHub Repository', url: 'https://github.com/PhilBKouokam/spendwise' }),
     ]),
@@ -53,10 +49,8 @@ export const projects = Object.freeze([
   Object.freeze({
     id: 'habit-tracker',
     name: 'Habit Tracker',
-    description: 'Developed a production-ready MERN application for secure habit tracking with authenticated CRUD operations.',
     bullets: Object.freeze([
-      'Built authentication, authorization, and global state management using JWT and React Context.',
-      'Resolved deployment issues involving CORS, environment variables, and MongoDB Atlas connectivity.',
+      'Built a secure MERN habit tracker with JWT authentication, React Context state, persistent CRUD, and resolved deployment issues.',
     ]),
     technologies: Object.freeze([
       'React',
@@ -68,9 +62,56 @@ export const projects = Object.freeze([
     ]),
     linksLabel: 'Habit Tracker links',
     links: Object.freeze([
-      Object.freeze({ id: 'case-study', label: 'Portfolio Case Study', url: 'https://philbk.dev' }),
+      Object.freeze({ id: 'case-study', label: 'Portfolio Case Study', url: 'https://philbk.dev/#projects' }),
       Object.freeze({ id: 'live-demo', label: 'Live Demo', url: 'https://habit-tracker-fullstack-ten.vercel.app' }),
       Object.freeze({ id: 'github', label: 'GitHub Repository', url: 'https://github.com/PhilBKouokam/habit-tracker-fullstack' }),
+    ]),
+  }),
+  Object.freeze({
+    id: 'aws-highly-available-web-application',
+    name: 'AWS Highly Available Web Application',
+    bullets: Object.freeze([
+      'Deployed fault-tolerant AWS infrastructure using EC2, Elastic Load Balancing, Auto Scaling, CloudWatch, SNS, and IAM.',
+    ]),
+    technologies: Object.freeze([
+      'AWS',
+      'Amazon EC2',
+      'Elastic Load Balancing',
+      'Auto Scaling',
+      'CloudWatch',
+      'Amazon SNS',
+      'IAM',
+    ]),
+    linksLabel: 'AWS Highly Available Web Application links',
+    links: Object.freeze([
+      Object.freeze({
+        id: 'github',
+        label: 'GitHub Repository',
+        url: 'https://github.com/PhilBKouokam/aws-highly-available-web-application',
+      }),
+    ]),
+  }),
+  Object.freeze({
+    id: 'aws-serverless-etl-pipeline',
+    name: 'AWS Serverless ETL Pipeline',
+    bullets: Object.freeze([
+      'Built an event-driven AWS pipeline using S3, Lambda, Glue, IAM, and Python to automate CSV-to-JSON transformation.',
+    ]),
+    technologies: Object.freeze([
+      'AWS',
+      'Amazon S3',
+      'AWS Lambda',
+      'AWS Glue',
+      'IAM',
+      'Python',
+    ]),
+    linksLabel: 'AWS Serverless ETL Pipeline links',
+    links: Object.freeze([
+      Object.freeze({
+        id: 'github',
+        label: 'GitHub Repository',
+        url: 'https://github.com/PhilBKouokam/aws-serverless-etl-pipeline',
+      }),
     ]),
   }),
 ])
