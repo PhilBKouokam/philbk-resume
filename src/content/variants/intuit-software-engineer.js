@@ -1,24 +1,22 @@
 import { certifications } from '../shared/certifications.js'
+import { education } from '../shared/education.js'
+import {
+  intuitSoftwareEngineerMetadata,
+  intuitSoftwareEngineerProjects,
+  intuitSoftwareEngineerSkills,
+  intuitSoftwareEngineerSummary,
+} from '../shared/intuitSoftwareEngineer.js'
 import { links } from '../shared/links.js'
 import { profile } from '../shared/profile.js'
-import {
-  twitchSoftwareEngineerEducation,
-  twitchSoftwareEngineerMetadata,
-  twitchSoftwareEngineerProjects,
-  twitchSoftwareEngineerSkills,
-  twitchSoftwareEngineerSummary,
-} from '../shared/twitchSoftwareEngineer.js'
 
-const awsCertification = certifications
-  .filter(({ id }) => id === 'aws-solutions-architect-associate')
-  .map(({ id, issuer, name }) => ({ id, issuer, name }))
+const certificationItems = certifications.map(({ id, issuer, name }) => ({ id, issuer, name }))
 
 export default Object.freeze({
-  id: 'twitch-software-engineer',
-  label: 'Twitch Software Engineer, Commerce Engineering (BITS)',
+  id: 'intuit-software-engineer',
+  label: 'Intuit Software Engineer',
   locale: 'en-US',
   status: 'published',
-  metadata: twitchSoftwareEngineerMetadata,
+  metadata: intuitSoftwareEngineerMetadata,
   labels: {
     present: 'Present',
   },
@@ -29,35 +27,35 @@ export default Object.freeze({
     linksLabel: 'Contact and professional links',
     links: [links.portfolio, links.phone, links.email, links.github, links.linkedin],
   },
-  summary: twitchSoftwareEngineerSummary,
+  summary: intuitSoftwareEngineerSummary,
   sections: [
     {
       id: 'technical-skills',
       type: 'skills',
       position: 1,
       heading: 'Technical Skills',
-      items: twitchSoftwareEngineerSkills,
+      items: intuitSoftwareEngineerSkills,
     },
     {
       id: 'selected-engineering-projects',
       type: 'projects',
       position: 2,
       heading: 'Selected Engineering Projects',
-      items: twitchSoftwareEngineerProjects,
+      items: intuitSoftwareEngineerProjects,
     },
     {
       id: 'certifications',
       type: 'certifications',
       position: 3,
-      heading: 'Certification',
-      items: awsCertification,
+      heading: 'Certifications',
+      items: certificationItems,
     },
     {
       id: 'education',
       type: 'education',
       position: 4,
       heading: 'Education',
-      items: twitchSoftwareEngineerEducation,
+      items: education,
     },
   ],
 })

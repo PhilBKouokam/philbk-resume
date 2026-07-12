@@ -21,6 +21,7 @@ export const skillGroups = Object.freeze([
       'Express.js',
       'REST APIs',
       'JWT Authentication',
+      'MongoDB',
       'Mongoose',
     ]),
   }),

@@ -9,16 +9,18 @@ function canonicalProject(id) {
 const calorieBank = canonicalProject('caloriebank')
 const spendWise = canonicalProject('spendwise')
 const habitTracker = canonicalProject('habit-tracker')
+const awsHighlyAvailable = canonicalProject('aws-highly-available-web-application')
+const awsServerlessEtl = canonicalProject('aws-serverless-etl-pipeline')
 
 export const twitchSoftwareEngineerMetadata = Object.freeze({
-  title: 'Phillip-Bryan Kouokam | Twitch Software Engineer I, Commerce Engineering',
-  description: 'Full-stack software engineering résumé tailored for Twitch Commerce Engineering.',
+  title: 'Phillip-Bryan Kouokam | Twitch Software Engineer, Commerce Engineering',
+  description: 'Full-stack software engineering résumé tailored for Twitch Commerce Engineering (BITS).',
   filename: 'phillip-bryan-kouokam-twitch-software-engineer.pdf',
 })
 
 export const twitchSoftwareEngineerSummary = Object.freeze({
   heading: 'Professional Summary',
-  text: 'Full-Stack Software Engineer specializing in React, JavaScript, Node.js, Express.js, MongoDB, and AWS. Built responsive, user-focused web applications featuring reusable React components, REST APIs, authentication, validation, and scalable full-stack architecture. Passionate about creating intuitive customer experiences, writing clean maintainable code, collaborating across teams, and delivering high-quality software from design through deployment.',
+  text: 'Full-Stack Software Engineer specializing in React, JavaScript, Node.js, Express.js, MongoDB, and AWS. AWS Certified Solutions Architect – Associate with experience building production-quality consumer-facing web applications, secure REST APIs, responsive user interfaces, and cloud solutions. Passionate about creating intuitive products, improving user experiences, and building scalable software using modern engineering practices.',
 })
 
 export const twitchSoftwareEngineerSkills = Object.freeze([
@@ -31,9 +33,9 @@ export const twitchSoftwareEngineerSkills = Object.freeze([
       'HTML5',
       'CSS3',
       'Tailwind CSS',
-      'React Router',
-      'Context API',
       'Responsive Design',
+      'Context API',
+      'React Router',
       'Accessibility',
       'Vite',
     ]),
@@ -53,7 +55,14 @@ export const twitchSoftwareEngineerSkills = Object.freeze([
   Object.freeze({
     id: 'cloud',
     label: 'Cloud',
-    skills: Object.freeze(['AWS', 'EC2', 'S3', 'IAM', 'MongoDB Atlas']),
+    skills: Object.freeze([
+      'AWS',
+      'EC2',
+      'S3',
+      'IAM',
+      'MongoDB Atlas',
+      'AWS Certified Solutions Architect – Associate',
+    ]),
   }),
   Object.freeze({
     id: 'engineering',
@@ -62,17 +71,13 @@ export const twitchSoftwareEngineerSkills = Object.freeze([
       'Git',
       'GitHub',
       'Object-Oriented Programming',
-      'Component-Based Architecture',
-      'State Management',
-      'API Integration',
+      'Software Architecture',
+      'API Design',
+      'Validation',
       'Debugging',
       'Testing',
-      'ESLint',
-      'Vitest',
       'Performance Optimization',
       'Deployment',
-      'Software Architecture',
-      'Agile Development',
     ]),
   }),
 ])
@@ -80,37 +85,40 @@ export const twitchSoftwareEngineerSkills = Object.freeze([
 export const twitchSoftwareEngineerProjects = Object.freeze([
   Object.freeze({
     ...calorieBank,
-    description: 'Designed and deployed a consumer-facing full-stack application integrating a responsive React interface with Express.js REST APIs, MongoDB persistence, authentication, and AWS S3 uploads.',
     bullets: Object.freeze([
-      'Built reusable React components and Context API state management for an intuitive desktop and mobile experience.',
-      'Integrated frontend, API, authentication, and database workflows through a maintainable application architecture.',
-      'Iterated from development through deployment using AWS S3, Vercel, and Render.',
+      'Built a production-ready MERN application with responsive React components and Context API state for personalized nutrition workflows.',
+      'Implemented secure JWT REST APIs, MongoDB profiles, AWS S3 uploads, and deployment through Vercel and Render.',
     ]),
   }),
   Object.freeze({
     ...spendWise,
-    description: 'Built a responsive personal finance application with reusable React dashboards, authenticated Express.js APIs, MongoDB persistence, and AWS S3 storage.',
     bullets: Object.freeze([
-      'Developed maintainable UI components for expense tracking, budgeting, and interactive financial visualization.',
-      'Integrated responsive frontend workflows with REST APIs, persistent CRUD operations, and cloud storage.',
+      'Built a responsive MERN finance dashboard with secure CRUD workflows, reusable React architecture, Recharts, and AWS S3 uploads.',
     ]),
   }),
   Object.freeze({
     ...habitTracker,
-    description: 'Developed a reliable MERN application with authenticated CRUD architecture and predictable client-server state management.',
     bullets: Object.freeze([
-      'Built authentication, authorization, reusable components, and global state management using JWT and React Context.',
-      'Debugged CORS, environment variable, and MongoDB Atlas connectivity issues across deployment environments.',
+      'Built authenticated REST CRUD workflows with reusable React components, Context API state, and MongoDB persistence.',
+    ]),
+  }),
+  Object.freeze({
+    ...awsHighlyAvailable,
+    bullets: Object.freeze([
+      'Deployed monitored AWS infrastructure using EC2, Elastic Load Balancing, Auto Scaling, CloudWatch, SNS, and IAM.',
+    ]),
+  }),
+  Object.freeze({
+    ...awsServerlessEtl,
+    bullets: Object.freeze([
+      'Built an event-driven AWS pipeline using S3, Lambda, Glue, IAM, and Python to automate CSV-to-JSON transformation.',
     ]),
   }),
   Object.freeze({
     id: 'resume-publishing-engine',
     name: 'Resume Publishing Engine',
-    description: 'Built a reliable document publishing platform with reusable architecture, validation, automated testing, and deterministic export.',
     bullets: Object.freeze([
-      'Implemented schema validation and immutable normalization to generate predictable documents from canonical content.',
-      'Added Zod, Vitest, and ESLint quality gates to detect content and rendering failures before export.',
-      'Engineered reproducible browser-to-PDF publishing with Playwright and documented maintenance workflows.',
+      'Built a React publishing system with reusable architecture, schema validation, automated tests, and deterministic PDF generation.',
     ]),
     technologies: Object.freeze(['React', 'Vite', 'Zod', 'Vitest', 'ESLint', 'Playwright']),
     linksLabel: 'Resume Publishing Engine links',
