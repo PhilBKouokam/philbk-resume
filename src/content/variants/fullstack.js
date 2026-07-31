@@ -38,7 +38,7 @@ export default Object.freeze({
       id: 'selected-engineering-projects',
       type: 'projects',
       position: 2,
-      heading: 'Selected Engineering Projects',
+      heading: 'Selected Products & Engineering Projects',
       items: projects,
     },
     {

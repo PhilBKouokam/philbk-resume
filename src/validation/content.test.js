@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import {
   ContentValidationError,
+  loadVariant,
   normalizeResumeVariant,
   validateResumeVariant,
 } from '../content/index.js'
@@ -91,5 +92,88 @@ describe('validateResumeVariant', () => {
 
     expect(() => validateResumeVariant(variant)).toThrow(ContentValidationError)
     expect(() => validateResumeVariant(variant)).toThrow(/Invalid resume variant "test-variant"/)
+  })
+})
+
+describe('default fullstack content safeguards', () => {
+  const expectedProjectIds = [
+    'caloriebank',
+    'spendwise',
+    'habit-tracker',
+    'aws-highly-available-web-application',
+    'aws-serverless-etl-pipeline',
+  ]
+  const unsupportedClaims = [
+    'Apple Health',
+    'Fitbit',
+    'MyFitnessPal',
+    'native mobile',
+    'health integration',
+    'automated ingestion',
+    'RAG',
+    'fine-tuning',
+    'model training',
+    'autonomous agents',
+    'machine-learning models',
+  ]
+
+  it('preserves required sections, projects, credentials, and education', async () => {
+    const model = await loadVariant('fullstack')
+    const sectionTypes = model.sections.map((section) => section.type)
+    const projects = model.sections.find((section) => section.type === 'projects')
+
+    expect(sectionTypes).toEqual(['skills', 'projects', 'certifications', 'education'])
+    expect(sectionTypes).not.toContain('experience')
+    expect(projects.items.map((project) => project.id)).toEqual(expectedProjectIds)
+  })
+
+  it('keeps the summary concise and grounded in conventional role and technology terms', async () => {
+    const model = await loadVariant('fullstack')
+    const summaryWords = model.summary.text.trim().split(/\s+/)
+    const searchableContent = [
+      model.header.headline,
+      model.summary.text,
+      ...model.sections.flatMap((section) =>
+        section.items.flatMap((item) => [
+          item.label ?? '',
+          ...(item.skills ?? []),
+          ...(item.technologies ?? []),
+        ]),
+      ),
+    ].join(' ')
+
+    expect(summaryWords.length).toBeGreaterThanOrEqual(45)
+    expect(summaryWords.length).toBeLessThanOrEqual(65)
+    for (const term of [
+      'Full-Stack Software Engineer',
+      'React',
+      'JavaScript',
+      'Node.js',
+      'Express.js',
+      'MongoDB',
+      'AWS',
+      'AI-assisted development',
+      'human judgment',
+    ]) {
+      expect(searchableContent).toContain(term)
+    }
+  })
+
+  it('keeps project bullets concise and rejects unsupported claims', async () => {
+    const model = await loadVariant('fullstack')
+    const projects = model.sections.find((section) => section.type === 'projects')
+    const defaultContent = [model.header.headline, model.summary.text]
+
+    for (const project of projects.items) {
+      expect(project.bullets).toHaveLength(1)
+      expect(project.bullets[0].trim().split(/\s+/).length).toBeLessThanOrEqual(35)
+      defaultContent.push(project.bullets[0])
+    }
+
+    for (const claim of unsupportedClaims) {
+      expect(defaultContent.join(' ').toLocaleLowerCase('en-US')).not.toContain(
+        claim.toLocaleLowerCase('en-US'),
+      )
+    }
   })
 })

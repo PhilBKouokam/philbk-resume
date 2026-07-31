@@ -3,7 +3,7 @@ export const projects = Object.freeze([
     id: 'caloriebank',
     name: 'CalorieBank',
     bullets: Object.freeze([
-      'Built a MERN calorie banking app with React Context state, Express REST APIs, JWT auth, MongoDB profiles, AWS S3, and Vercel/Render.',
+      'Helps people plan eating flexibility through a calorie-banking web app engineered with React Context, Express REST APIs, JWT, MongoDB, AWS S3, Vercel, and Render.',
     ]),
     technologies: Object.freeze([
       'React',
@@ -31,7 +31,7 @@ export const projects = Object.freeze([
     id: 'spendwise',
     name: 'SpendWise',
     bullets: Object.freeze([
-      'Built an authenticated MERN finance dashboard with React views, CRUD REST APIs, MongoDB persistence, Recharts, and AWS S3 uploads.',
+      'Organizes spending, budgets, and receipts through authenticated React views, CRUD REST APIs, MongoDB persistence, Recharts visualizations, and AWS S3 uploads.',
     ]),
     technologies: Object.freeze([
       'React',
@@ -57,7 +57,7 @@ export const projects = Object.freeze([
     id: 'habit-tracker',
     name: 'Habit Tracker',
     bullets: Object.freeze([
-      'Built a secure MERN habit tracker with JWT auth, React Context state, CRUD REST APIs, MongoDB persistence, and deployment debugging.',
+      'Helps users maintain habits with JWT authentication, React Context, CRUD REST APIs, MongoDB persistence, and deployment debugging.',
     ]),
     technologies: Object.freeze([
       'React',
@@ -82,7 +82,7 @@ export const projects = Object.freeze([
     id: 'aws-highly-available-web-application',
     name: 'AWS Highly Available Web Application',
     bullets: Object.freeze([
-      'Designed highly available AWS architecture with EC2, Elastic Load Balancing, Auto Scaling, CloudWatch, SNS, and IAM.',
+      'Architected an AWS web application for availability, traffic distribution, automatic scaling, and operational visibility using EC2, Elastic Load Balancing, Auto Scaling, CloudWatch, SNS, and IAM.',
     ]),
     technologies: Object.freeze([
       'AWS',
@@ -106,7 +106,7 @@ export const projects = Object.freeze([
     id: 'aws-serverless-etl-pipeline',
     name: 'AWS Serverless ETL Pipeline',
     bullets: Object.freeze([
-      'Built an event-driven AWS ETL pipeline with S3, Lambda, Glue, IAM, and Python to automate CSV-to-JSON transformation.',
+      'Automated event-driven CSV-to-JSON transformation with Amazon S3, AWS Lambda, AWS Glue, IAM, and Python.',
     ]),
     technologies: Object.freeze([
       'AWS',
