@@ -1,16 +1,16 @@
 export const skillGroups = Object.freeze([
   Object.freeze({
     id: 'frontend',
-    label: 'Frontend',
+    label: 'Frontend & Mobile',
     skills: Object.freeze([
       'React',
       'JavaScript (ES6+)',
       'HTML5',
       'CSS3',
       'Tailwind CSS',
-      'React Router',
-      'Context API',
-      'Vite',
+      'TypeScript',
+      'React Native',
+      'Expo',
     ]),
   }),
   Object.freeze({
@@ -53,14 +53,9 @@ export const skillGroups = Object.freeze([
     label: 'Engineering Practices',
     skills: Object.freeze([
       'Product Discovery',
-      'Systems Thinking',
       'Component Architecture',
-      'REST API Design',
-      'Debugging',
       'Accessibility',
       'Performance Optimization',
-      'AI-Assisted Development',
-      'Human Verification',
     ]),
   }),
 ])

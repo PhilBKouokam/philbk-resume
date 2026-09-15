@@ -66,6 +66,7 @@ async function run() {
       })
       console.log(`Exported ${model.id}: ${result.outputPath}`)
       console.log(`Validated: 1 page, ${result.validation.textItemCount} text items, ${result.validation.linkCount} links`)
+      console.log(`Layout: ${result.layout.contentHeight.toFixed(2)} px high, ${result.layout.width.toFixed(2)} px wide; ${result.layout.trailingWhitespace.toFixed(2)} px remaining in conservative 960 px export area`)
       console.log(`SHA-256: ${result.digest}`)
     }
   } finally {

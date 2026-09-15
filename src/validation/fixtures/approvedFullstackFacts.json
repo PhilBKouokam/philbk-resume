@@ -1,0 +1,68 @@
+{
+  "header": {
+    "name": "Phillip-Bryan Kouokam",
+    "headline": "AI-Native Full-Stack Engineer",
+    "location": "Houston, Texas",
+    "linksLabel": "Contact and professional links",
+    "links": [
+      {
+        "id": "portfolio",
+        "label": "Portfolio: philbk.dev",
+        "url": "https://philbk.dev"
+      },
+      {
+        "id": "phone",
+        "label": "(214) 309-2150",
+        "url": "tel:+12143092150"
+      },
+      {
+        "id": "email",
+        "label": "kouokambryan@gmail.com",
+        "url": "mailto:kouokambryan@gmail.com"
+      },
+      {
+        "id": "github",
+        "label": "GitHub",
+        "url": "https://github.com/PhilBKouokam"
+      },
+      {
+        "id": "linkedin",
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/phillip-bryan-kouokam"
+      }
+    ]
+  },
+  "certifications": [
+    {
+      "id": "aws-solutions-architect-associate",
+      "issuer": "Amazon Web Services",
+      "name": "AWS Certified Solutions Architect – Associate"
+    },
+    {
+      "id": "ibm-front-end-developer",
+      "issuer": "IBM",
+      "name": "IBM Front-End Developer Professional Certificate"
+    }
+  ],
+  "education": [
+    {
+      "id": "university-of-houston",
+      "institution": "University of Houston",
+      "credential": "Computer Science Coursework",
+      "field": "Dean's List (Multiple Semesters)"
+    }
+  ],
+  "projectUrls": [
+    "https://caloriebank-pi.vercel.app",
+    "https://github.com/PhilBKouokam/CalorieBank",
+    "https://www.loom.com/share/3a0f06928e004bad80cd4ae181f65d1c",
+    "https://spendwise-two-navy.vercel.app",
+    "https://github.com/PhilBKouokam/spendwise",
+    "https://www.loom.com/share/75bc2eae927b4d0d9c22ff35297a09c1",
+    "https://habit-tracker-fullstack-ten.vercel.app",
+    "https://github.com/PhilBKouokam/HabitTracker",
+    "https://www.loom.com/share/f69f4dce4b53414299a23805874cc25b",
+    "https://github.com/PhilBKouokam/aws-highly-available-web-application",
+    "https://github.com/PhilBKouokam/aws-serverless-etl-pipeline"
+  ]
+}

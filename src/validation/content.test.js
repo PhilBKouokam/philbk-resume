@@ -104,10 +104,18 @@ describe('default fullstack content safeguards', () => {
     'aws-serverless-etl-pipeline',
   ]
   const unsupportedClaims = [
+    'production authentication',
+    'notifications',
+    'background delivery',
+    'projections',
+    'enterprise scale',
+    'production AI',
+    'revenue',
+    'adoption',
+    'professional software engineering experience',
     'Apple Health',
     'Fitbit',
     'MyFitnessPal',
-    'native mobile',
     'health integration',
     'automated ingestion',
     'RAG',
@@ -162,18 +170,18 @@ describe('default fullstack content safeguards', () => {
   it('keeps project bullets concise and rejects unsupported claims', async () => {
     const model = await loadVariant('fullstack')
     const projects = model.sections.find((section) => section.type === 'projects')
-    const defaultContent = [model.header.headline, model.summary.text]
+    const defaultContent = [JSON.stringify(model)]
 
     for (const project of projects.items) {
-      expect(project.bullets).toHaveLength(1)
-      expect(project.bullets[0].trim().split(/\s+/).length).toBeLessThanOrEqual(35)
-      defaultContent.push(project.bullets[0])
+      expect(project.bullets).toHaveLength(expectedProjectIds.indexOf(project.id) < 3 ? 2 : 1)
+      for (const bullet of project.bullets) {
+        expect(bullet.trim().split(/\s+/).length).toBeLessThanOrEqual(35)
+      }
+      defaultContent.push(...project.bullets)
     }
 
     for (const claim of unsupportedClaims) {
-      expect(defaultContent.join(' ').toLocaleLowerCase('en-US')).not.toContain(
-        claim.toLocaleLowerCase('en-US'),
-      )
+      expect(defaultContent.join(' ')).not.toMatch(new RegExp(`\\b${claim}\\b`, 'i'))
     }
   })
 })

@@ -24,11 +24,11 @@ export default function ProjectItem({ item }) {
             ))}
           </ul>
         ) : null}
-        <ul data-technologies="">
+        {item.technologies.length > 0 ? <ul data-technologies="">
           {item.technologies.map((technology) => (
             <li key={technology}>{technology}</li>
           ))}
-        </ul>
+        </ul> : null}
       </article>
     </li>
   )

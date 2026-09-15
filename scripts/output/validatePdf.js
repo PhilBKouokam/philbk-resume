@@ -88,6 +88,19 @@ export async function validatePdf(filePath, model) {
       { missingText },
     )
 
+    // Catch browser auto-shrinking even when CSS still declares an 8.5 pt body.
+    if (model.id === 'fullstack') {
+      const bodyStarts = [model.summary.text, ...model.sections
+        .filter((section) => section.type === 'projects')
+        .flatMap((section) => section.items.flatMap((item) => item.bullets ?? []))]
+        .map((text) => text.slice(0, 24))
+      for (const start of bodyStarts) {
+        const item = textContent.items.find((item) => item.str?.startsWith(start))
+        assert(item && item.height >= 8.45, 'UNDERSIZED_BODY_TEXT',
+          'Canonical summary and project text must retain the 8.5 pt body size.', { start, height: item?.height })
+      }
+    }
+
     const annotations = await page.getAnnotations({ intent: 'display' })
     const actualLinks = annotations
       .filter((annotation) => annotation.subtype === 'Link' && annotation.url)

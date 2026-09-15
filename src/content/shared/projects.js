@@ -3,22 +3,13 @@ export const projects = Object.freeze([
     id: 'caloriebank',
     name: 'CalorieBank',
     bullets: Object.freeze([
-      'Helps people plan eating flexibility through a calorie-banking web app engineered with React Context, Express REST APIs, JWT, MongoDB, AWS S3, Vercel, and Render.',
+      'Independently building CalorieBank for flexible calorie planning across days, with a web prototype and working iOS and Android mobile versions now being tested by early users.',
+      'Own product decisions and full-stack engineering with React Native, Expo, and Express APIs for saving product data; iterate on real usage and feedback, documenting development publicly on GitHub.',
     ]),
-    technologies: Object.freeze([
-      'React',
-      'Node.js',
-      'Express.js',
-      'MongoDB',
-      'JWT',
-      'AWS S3',
-      'Tailwind CSS',
-      'Vercel',
-      'Render',
-    ]),
+    technologies: Object.freeze([]),
     linksLabel: 'CalorieBank links',
     links: Object.freeze([
-      Object.freeze({ id: 'live-demo', label: 'Live Demo', url: 'https://caloriebank-pi.vercel.app' }),
+      Object.freeze({ id: 'live-demo', label: 'Web Prototype', url: 'https://caloriebank-pi.vercel.app' }),
       Object.freeze({ id: 'github', label: 'GitHub', url: 'https://github.com/PhilBKouokam/CalorieBank' }),
       Object.freeze({
         id: 'walkthrough',
@@ -31,17 +22,10 @@ export const projects = Object.freeze([
     id: 'spendwise',
     name: 'SpendWise',
     bullets: Object.freeze([
-      'Organizes spending, budgets, and receipts through authenticated React views, CRUD REST APIs, MongoDB persistence, Recharts visualizations, and AWS S3 uploads.',
+      'Built a personal finance app to organize transactions, understand spending through charts, and keep receipts alongside financial records.',
+      'Engineered secure sign-in with JWT, transaction management through Express APIs and MongoDB, spending charts with Recharts, and receipt storage in AWS S3.',
     ]),
-    technologies: Object.freeze([
-      'React',
-      'Node.js',
-      'Express.js',
-      'MongoDB',
-      'JWT',
-      'AWS S3',
-      'Recharts',
-    ]),
+    technologies: Object.freeze([]),
     linksLabel: 'SpendWise links',
     links: Object.freeze([
       Object.freeze({ id: 'live-demo', label: 'Live Demo', url: 'https://spendwise-two-navy.vercel.app' }),
@@ -57,16 +41,10 @@ export const projects = Object.freeze([
     id: 'habit-tracker',
     name: 'Habit Tracker',
     bullets: Object.freeze([
-      'Helps users maintain habits with JWT authentication, React Context, CRUD REST APIs, MongoDB persistence, and deployment debugging.',
+      'Built a habit-tracking app with personal accounts where users create habits and mark them complete to support consistent routines.',
+      'Connected React screens to Express APIs and MongoDB to save personal habit data between visits, with JWT authentication protecting account access.',
     ]),
-    technologies: Object.freeze([
-      'React',
-      'Node.js',
-      'Express.js',
-      'MongoDB',
-      'JWT',
-      'Context API',
-    ]),
+    technologies: Object.freeze([]),
     linksLabel: 'Habit Tracker links',
     links: Object.freeze([
       Object.freeze({ id: 'live-demo', label: 'Live Demo', url: 'https://habit-tracker-fullstack-ten.vercel.app' }),
@@ -82,17 +60,9 @@ export const projects = Object.freeze([
     id: 'aws-highly-available-web-application',
     name: 'AWS Highly Available Web Application',
     bullets: Object.freeze([
-      'Architected an AWS web application for availability, traffic distribution, automatic scaling, and operational visibility using EC2, Elastic Load Balancing, Auto Scaling, CloudWatch, SNS, and IAM.',
+      'Designed an AWS web architecture to distribute traffic, scale server capacity automatically, and monitor availability using EC2, Elastic Load Balancing, Auto Scaling, and CloudWatch.',
     ]),
-    technologies: Object.freeze([
-      'AWS',
-      'Amazon EC2',
-      'Elastic Load Balancing',
-      'Auto Scaling',
-      'CloudWatch',
-      'Amazon SNS',
-      'IAM',
-    ]),
+    technologies: Object.freeze([]),
     linksLabel: 'AWS Highly Available Web Application links',
     links: Object.freeze([
       Object.freeze({
@@ -106,16 +76,9 @@ export const projects = Object.freeze([
     id: 'aws-serverless-etl-pipeline',
     name: 'AWS Serverless ETL Pipeline',
     bullets: Object.freeze([
-      'Automated event-driven CSV-to-JSON transformation with Amazon S3, AWS Lambda, AWS Glue, IAM, and Python.',
+      'Automated conversion of uploaded CSV files into JSON using S3, Lambda, Glue, and Python, demonstrating cloud data processing triggered by file uploads.',
     ]),
-    technologies: Object.freeze([
-      'AWS',
-      'Amazon S3',
-      'AWS Lambda',
-      'AWS Glue',
-      'IAM',
-      'Python',
-    ]),
+    technologies: Object.freeze([]),
     linksLabel: 'AWS Serverless ETL Pipeline links',
     links: Object.freeze([
       Object.freeze({

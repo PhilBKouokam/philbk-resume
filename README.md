@@ -200,3 +200,7 @@ See [PRD.md](./PRD.md) for the product requirements and architectural decisions.
 ## License
 
 This repository does not currently include a software license.
+
+## New job applications
+
+Start fresh from the canonical `fullstack` résumé using [Fresh tailoring](docs/FRESH_TAILORING.md). Historical variants remain intact as archival work; they are not the starting point for new applications. Mirror employer language only where verified evidence supports it.

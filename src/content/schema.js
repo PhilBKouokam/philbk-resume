@@ -1,4 +1,5 @@
 import { z } from 'zod'
+import { assertCanonicalClaims } from './canonicalSafeguards.js'
 
 export const SUPPORTED_SECTION_TYPES = Object.freeze([
   'skills',
@@ -115,7 +116,7 @@ const projectItemSchema = z
     name: requiredText('Project name'),
     description: requiredText('Project description').optional(),
     bullets: z.array(requiredText('Project bullet')).min(1).optional(),
-    technologies: z.array(requiredText('Technology')).min(1, 'Project technologies cannot be empty'),
+    technologies: z.array(requiredText('Technology')),
     linksLabel: requiredText('Project links label').optional(),
     links: z.array(externalLinkSchema).min(1).optional(),
   })
@@ -279,5 +280,8 @@ export function validateResumeVariant(input) {
     throw new ContentValidationError(variantId, result.error.issues)
   }
 
+  if (result.data.id === 'fullstack' && result.data.status === 'published') {
+    assertCanonicalClaims(result.data)
+  }
   return Object.freeze(result.data)
 }
